@@ -1,0 +1,24 @@
+﻿@model CoverType
+
+<div class="container mt-5 p-3 border border-success">
+    <div class="row">
+        <h3>Remove Cover Type</h3>
+    </div>
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <form method="post">
+        <div class="row mt-3 p-3">
+            <label class="form-label" asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" readonly/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success me-3" style="width:100px;">Delete</button>
+        <button class="btn btn-info" style="width:100px;" asp-controller="CoverType" asp-action="Index">Back</button>
+    </form>
+</div>
+
+@section Scripts
+    {
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
